@@ -1,5 +1,5 @@
 let fs = require('fs');
-let { getSVNRev, getGITRev } = require('./lib/get-rev');
+let { getSVNRev, getGITRev, getGITBranch, getSVNBranch } = require('./lib/get-rev');
 
 function witerFile(path, data) {
   fs.writeFile(path, data, function (err) {
@@ -30,13 +30,18 @@ module.exports = (api, projectOptions) => {
         const FULLPATH = `${DIR}/${FILENAME}.json`;
 
         const getRev = CVS === 'git' ? getGITRev : getSVNRev
+        const getBranch = CVS === 'git' ? getGITBranch : getSVNBranch
         const rev = await getRev().catch((e) => {
+          console.log(e);
+        });
+        const branch = await getBranch().catch((e) => {
           console.log(e);
         });
         let obj = {
           date: defaultVersion,
           cvs: CVS,
           rev: rev,
+          branch: branch,
         };
 
         fs.access(DIR, fs.constants.F_OK, function (err) {

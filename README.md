@@ -9,6 +9,7 @@ the content should like this
   "date": "2020-09-23 11:11:11", // last build date
   "cvs": "git", // cvs type
   "rev": "a4f56gf" // cvs short HEAD rev
+  "branch": "master" // cvs current branch, not support when csv type is svn
 }
 ```
 
