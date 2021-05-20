@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-bundle-version",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "vue-cli plugin to generate build version file.",
   "main": "index.js",
   "author": "yinzhenyu",
