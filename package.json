@@ -1,13 +1,13 @@
 {
-  "name": "@huibiaoli/vue-cli-plugin-build-version",
+  "name": "vue-cli-plugin-bundle-version",
   "version": "1.0.6",
   "description": "vue-cli plugin to generate build version file.",
   "main": "index.js",
   "author": "yinzhenyu",
   "keywords": [
-    "vue build version",
-    "vue-build-version",
-    "vue-cli-plugin-build-version"
+    "vue bundle version",
+    "vue-bundle-version",
+    "vue-cli-plugin-bundle-version"
   ],
   "repository": {
     "type": "git",

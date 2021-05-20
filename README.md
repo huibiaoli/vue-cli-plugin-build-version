@@ -20,20 +20,20 @@ the content should like this
 1. install from you node package manager.
 
    ```js
-   npm install vue-cli-plugin-build-version
+   npm install vue-cli-plugin-bundle-version
    ```
 
    or
 
    ```js
-   vue add vue-cli-plugin-build-version
+   vue add vue-cli-plugin-bundle-version
    ```
 
 2. put below config in **vue.config.js**
 
    ```js
    pluginOptions: {
-     buildVersion: {
+     bundleVersion: {
        path: require('path').resolve('dist'), // build root dir
        env: require('process').env, // env obj
        cvs: 'git', // cvs type, git or svn
@@ -46,7 +46,7 @@ the content should like this
 3. put below config in **package.json** `scripts` fields
 
    ```json
-   "buildVersion": "vue-cli-service build-version"
+   "bundleVersion": "vue-cli-service bundle-version"
    ```
 
-4. run `npm run buildVersion`
+4. run `npm run bundleVersion`
