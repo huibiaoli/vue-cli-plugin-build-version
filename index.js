@@ -13,15 +13,15 @@ function witerFile(path, data) {
 
 module.exports = (api, projectOptions) => {
   api.registerCommand(
-    'build-version',
+    'bundle-version',
     {
       description: 'generate version file for vue cli',
-      usage: 'vue-cli-service build-version',
+      usage: 'vue-cli-service bundle-version',
       options: {},
     },
     async (_) => {
       try {
-        const options = projectOptions.pluginOptions.buildVersion;
+        const options = projectOptions.pluginOptions.bundleVersion;
         const defaultVersion = new Date().toLocaleString();
         const { path, env, versionPath, name, cvs } = options;
         const DIR = `${path}/${versionPath}`;
